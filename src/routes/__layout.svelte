@@ -1,3 +1,22 @@
+<script lang="ts">
+	import { noteStore } from "../store";
+
+	import noteService from "../services/Notes";
+	import { onMount } from "svelte";
+
+	let error: string | undefined = ""
+	
+	onMount(() => {
+		noteService.getAllNotes()
+			.then(res => {
+				if(res.data){
+				noteStore.addNote(res.data)
+				}else{
+					error = res.error?.message			
+				}
+			})
+	})
+</script>
 <div class="container">
 	<slot />
 </div>
