@@ -10,7 +10,10 @@ const config = {
 					scss: true
 				})
 			]
-		})
+		}),
+		{
+			name: 'sveltekit-socket-io'
+		}
 	]
 }
 

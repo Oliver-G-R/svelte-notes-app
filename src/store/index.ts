@@ -1,3 +1,3 @@
-import { NoteStore } from './Note';
+import { NoteStore } from './Note'
 
-export const noteStore = NoteStore();
+export const noteStore = NoteStore()
